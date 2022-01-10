@@ -5,7 +5,7 @@ import {useState,useEffect} from 'react';
 const messages = {
   "tr-TR": {
     title:"Merhaba Dünya",
-    description:"3 yeni mesajınız var"
+    description:"{count} yeni mesajınız var"
     
   },
   "en-US":{
@@ -33,6 +33,7 @@ function App() {
         <br/>
         <FormattedMessage
           id="description"
+          values ={{count:5}}
         />
         <br/>
         <button onClick={()=>setLocale('tr-TR')}>TR</button>
